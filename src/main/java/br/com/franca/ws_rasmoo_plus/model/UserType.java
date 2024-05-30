@@ -1,13 +1,19 @@
 package br.com.franca.ws_rasmoo_plus.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
 @Entity
 @Table(name = "user_type")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class UserType implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -23,12 +29,5 @@ public class UserType implements Serializable {
     @Column(name = "description")
     private String description;
 
-    public UserType(Long id, String name, String description) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-    }
 
-    public UserType() {
-    }
 }
