@@ -10,27 +10,27 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "subscription_type")
+@Table(name = "subscriptions_type")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class SubscriptionType implements Serializable {
+public class SubscriptionsType implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
-    @Column(name = "subscription_type_id")
+    @Column(name = "subscriptions_type_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(name = "name")
     private String name;
 
-    @Column(name = "acess_montths")
-    private Long acess_montths;
+    @Column(name = "access_months")
+    private Long accessMonths;
 
-    @Column(name = "description",precision = 10 , scale = 2)
+    @Column(name = "price",precision = 10 , scale = 2)
     private BigDecimal price;
 
     @Column(name = "product_key")
